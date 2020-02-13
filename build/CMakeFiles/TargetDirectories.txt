@@ -1,0 +1,3 @@
+C:/WorkSpace/Study/build/CMakeFiles/Study.dir
+C:/WorkSpace/Study/build/CMakeFiles/edit_cache.dir
+C:/WorkSpace/Study/build/CMakeFiles/rebuild_cache.dir
