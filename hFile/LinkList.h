@@ -57,16 +57,17 @@ LNode *LLGetElem(LinkList L, int i) {
     }
     return p;
 }
+
 //按逆序号查找节点
-LNode *LLGetElemBack(LinkList L,int k){
-    if(k<1)
+LNode *LLGetElemBack(LinkList L, int k) {
+    if (k < 1)
         return NULL;
     LNode *p = L->next;
     LNode *q = L->next;
-    while(k--){
+    while (k--) {
         p = p->next;
     }
-    while(p){
+    while (p) {
         p = p->next;
         q = q->next;
     }
@@ -76,7 +77,7 @@ LNode *LLGetElemBack(LinkList L,int k){
 //按值查找表节点
 LNode *LLLocateElem(LinkList L, ElemType e) {
     LNode *p = L->next;
-    while (p && p->data != e)
+    while (p && p->data != e) //这里
         p = p->next;
     return p;
 }
@@ -98,6 +99,7 @@ int LLdeleteI(LinkList L, int i) {
     return 1;
 }
 
+
 //单链表删除节点
 int LLdeleteX(LinkList L, LNode *q) {
     LNode *p = L->next;
@@ -114,6 +116,7 @@ int LLdeleteX(LinkList L, LNode *q) {
     }
     return 0;
 }
+
 
 //单链表的长度
 int LLLength(LinkList L) {
@@ -363,7 +366,7 @@ LinkList p38q14LLGetCommon(LinkList LA, LinkList LB) {
     LNode *s;
     LinkList LC;
     LC = (LinkList) malloc(sizeof(LNode));
-    LC->next =NULL;
+    LC->next = NULL;
     while (p && q) {
         if (p->data < q->data)
             p = p->next;
@@ -382,43 +385,43 @@ LinkList p38q14LLGetCommon(LinkList LA, LinkList LB) {
 }
 
 //p38 q15:已知A和B分别表示两个集合，其元素递增有序。求A和B的交集，并存入A链表中。
-LinkList p38q15LLgetCommon(LinkList La,LinkList Lb){
-	LNode *pa = La->next;
-	LNode *pb = Lb->next;
-	LNode *pc = La;
-	pc =La;
-	LNode *u;
-	while(pa&&pb){
-		if(pa->data == pb->data){
-			pc->next = pa;
-			pc = pa;
-			pa = pa->next;
-			u = pb;
-			pb = pb->next;
-			free(u);
-		}else if(pa->data<pb->data){
-			u = pa;
-			pa = pa->next;
-			free(u);
-		}else{
-			u = pb;
-			pb = pb->next;
-			free(u);
-		}
-	}
-	while(pa){
-		u = pa;
-		pa = pa->next;
-		free(u); 
-	}
-	while(pb){
-		u = pb;
-		pb = pb->next;
-		free(u);
-	}
-	pc->next = NULL;
-	free(Lb);
-	return La;
+LinkList p38q15LLgetCommon(LinkList La, LinkList Lb) {
+    LNode *pa = La->next;
+    LNode *pb = Lb->next;
+    LNode *pc = La;
+    pc = La;
+    LNode *u;
+    while (pa && pb) {
+        if (pa->data == pb->data) {
+            pc->next = pa;
+            pc = pa;
+            pa = pa->next;
+            u = pb;
+            pb = pb->next;
+            free(u);
+        } else if (pa->data < pb->data) {
+            u = pa;
+            pa = pa->next;
+            free(u);
+        } else {
+            u = pb;
+            pb = pb->next;
+            free(u);
+        }
+    }
+    while (pa) {
+        u = pa;
+        pa = pa->next;
+        free(u);
+    }
+    while (pb) {
+        u = pb;
+        pb = pb->next;
+        free(u);
+    }
+    pc->next = NULL;
+    free(Lb);
+    return La;
 }
 
 

@@ -31,11 +31,11 @@ int main() {
 //    SqList Sa;
 //    CreatSq(&Sa,a);
 //    deTriangle(3,4,5);
-    La = CreatListRear(La, L1, 2);
+    La = CreatListRear(La, a, 5);//尾插法创建单链表
     printLinkList(La);
-    Lb = CreatListRear(Lb, L2, 3);
-    printLinkList(Lb);
-    La = addTwoNumbers(La->next,Lb->next);
+//    Lb = CreatListRear(Lb, L2, 3);
+//    printLinkList(Lb);
+//    La = addTwoNumbers(La->next,Lb->next);
 //    cirArrLShift(L1,5,3);
 //    printD(L1,5);
 //    InsertSort2(a,9);
@@ -77,7 +77,7 @@ int main() {
 //    LL = p37q6LLSortI(LL);
 //    LL = p37q5LLInversion(LL);
 //    La = p37q5LLInversion(La);
-    printLinkList(La);
+//    printLinkList(La);
 //        printLinkList(LL);
 //    p37q4LLDeleteMin(LL);
 //    int a = 5,b = 9;

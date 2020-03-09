@@ -14,7 +14,6 @@
 #include "sort.h"
 #include "Select.h"
 
-#include "../day1Test.h"
 #include "leetCode.h"
 
 #ifndef STUDY_INCLUDE_H
