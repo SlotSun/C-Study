@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/WorkSpace/Study/day1Test.h
-stdio.h
--
-
 C:/WorkSpace/Study/hFile/BiTree.h
 
 C:/WorkSpace/Study/hFile/Ds.h
@@ -49,8 +45,6 @@ sort.h
 C:/WorkSpace/Study/hFile/sort.h
 Select.h
 C:/WorkSpace/Study/hFile/Select.h
-../day1Test.h
-C:/WorkSpace/Study/day1Test.h
 leetCode.h
 C:/WorkSpace/Study/hFile/leetCode.h
 
