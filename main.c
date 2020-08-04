@@ -21,18 +21,21 @@ int main() {
     int L2[] = {0,0,1};
     int b[] = {1, 1, 1, 2, 3, 3, 5, 7, 9, 11, 66};
     char str[] = "hello";
+
+//    printf("%s",intToRoman(6));
+//    printf("%d",(int)*(str+0) );
 //    reverseString(str,5);
 //    printf("%s",str);
-    LinkList La;
-    LinkList Lb;
+//    LinkList La;
+//    LinkList Lb;
 //    LNode *p;
 //    bubbleSort(a, 9);
 //    printD(a, 9);
 //    SqList Sa;
 //    CreatSq(&Sa,a);
 //    deTriangle(3,4,5);
-    La = CreatListRear(La, a, 5);//尾插法创建单链表
-    printLinkList(La);
+//    La = CreatListRear(La, a, 5);//尾插法创建单链表
+//    printLinkList(La);
 //    Lb = CreatListRear(Lb, L2, 3);
 //    printLinkList(Lb);
 //    La = addTwoNumbers(La->next,Lb->next);
@@ -41,8 +44,9 @@ int main() {
 //    InsertSort2(a,9);
 //    printD(a,9);
 //    love();
-//    BiTree T;
-//    T = PreCreatBiTree(Test2);
+    BiTree T;
+    T = PreCreatBiTree(Test2);
+    printf("%d\n", BTreeLeafCount(T));
 //    printf("%d\n", Btdepth2(T));
 //    printf("%d", balanceBiTree(T));
 //    LevelOrder(T);

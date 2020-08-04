@@ -79,13 +79,15 @@ int lengthOfLongestSubstring(char * s){
     int start = 0, end = 0, maxlen = 0;
     char map[256] = {0};
     map[(int)*(s+start)] = 1;
+
+
     while( *(s+end) != 0 )
     {
         maxlen = maxlen>(end-start+1)?maxlen:(end-start+1);
         ++end;
-        while( 0 != map[ (int)*(s+end) ] )//将要加入的新元素与map内元素冲突
+        while( 0 != map[ (int)*(s+end) ] )//将要加入的新元素与map内元素冲突，判断是否重复,重复为1
         {
-            map[ (int)*(s+start) ] = 0;
+            map[ (int)*(s+start) ] = 0; //重复置为0跳出循环，start位置后移直到和end重复位置
                ++start;
         }
         map[(int)*(s+end)] = 1;
@@ -94,7 +96,20 @@ int lengthOfLongestSubstring(char * s){
     return maxlen;
 }
 
+char * intToRoman(int num){
+    int values[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+    char *reps[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+    char * res = (char *)malloc(sizeof(char)*20);
+    memset(res, '\0', sizeof(char)*20);
 
+    for(int i=0; i<13; i++){
+        while(num>=values[i]){
+            num -= values[i];
+            strcat(res,reps[i]);
+        }
+    }
+    return res;
+}
 
 
 

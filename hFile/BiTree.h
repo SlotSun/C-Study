@@ -247,6 +247,17 @@ int DsonNodes(BiTree T) {
         return DsonNodes(T->lchild) + DsonNodes(T->rchild);
 }
 
+//计算二叉树中的叶节点个数
+int BTreeLeafCount(BiTree T) {
+    if (T == NULL) {
+        return 0;
+    } else if (T->lchild == NULL && T->rchild == NULL) {
+        return BTreeLeafCount(T->lchild) + BTreeLeafCount(T->rchild) + 1;
+    } else {
+        return BTreeLeafCount(T->lchild) + BTreeLeafCount(T->rchild);
+    }
+}
+
 //交换左右子树
 void SwapLRB(BiTree T) {
     if (T) {
